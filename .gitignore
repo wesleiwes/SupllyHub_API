@@ -1,0 +1,22 @@
+# Arquivos de dependências e ferramentas
+**/[Bb]in/
+**/[Oo]bj/
+**/packages/
+**/[Dd]ebug/
+**/[Rr]elease/
+
+# Pasta do Visual Studio
+.vs/
+
+# Arquivos de usuário e de solução temporários
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Arquivos de build do Rider
+*.resharper
+*_i.c
+*_p.c
+*_i.h
+*.generated.cs
