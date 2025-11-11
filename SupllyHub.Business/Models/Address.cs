@@ -9,4 +9,6 @@ public class Address : Entity
     public string? Neighborhood { get; set; }
     public string? City { get; set; }
     public string? State { get; set; }
+
+    public Supplier? Supplier {  get; set; } //*EF
 }
