@@ -24,7 +24,7 @@ public class SupplierMapping : IEntityTypeConfiguration<Supplier>
         // 1 : N
         builder.HasMany(p => p.Products)
             .WithOne(p => p.Supplier)
-            .HasForeignKey(p => p.SupllierId);
+            .HasForeignKey(p => p.SupplierId);
 
 
         builder.ToTable("TBSUPPLIER");

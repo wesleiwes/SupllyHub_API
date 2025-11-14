@@ -1,7 +1,7 @@
 ﻿namespace SupllyHub.Business.Models;
 public class Product : Entity
 {
-    public Guid SupllierId { get; set; }
+    public Guid SupplierId { get; set; }
 
     public string? Name { get; set; }
     public string? Description { get; set; }
