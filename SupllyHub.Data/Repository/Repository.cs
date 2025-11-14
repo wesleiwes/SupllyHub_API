@@ -7,7 +7,7 @@ using System.Linq.Expressions;
 namespace SupllyHub.Data.Repository;
 public abstract class Repository<TEntity>(MyDbContext context) : IRepository<TEntity> where TEntity : Entity, new()
 {
-    protected readonly MyDbContext context = context;
+    protected readonly MyDbContext Context = context;
     protected readonly DbSet<TEntity> DbSet = context.Set<TEntity>();
 
     public virtual Task Add(TEntity entity)
@@ -37,7 +37,7 @@ public abstract class Repository<TEntity>(MyDbContext context) : IRepository<TEn
     }
 
     public async Task<int> SaveChanges() => 
-        await context.SaveChangesAsync();
+        await Context.SaveChangesAsync();
 
-    public void Dispose() => context?.Dispose();
+    public void Dispose() => Context?.Dispose();
 }

@@ -6,6 +6,7 @@ using SupllyHub.Data.Context;
 namespace SupllyHub.Data.Repository;
 public class AddressRepository(MyDbContext context) : Repository<Address>(context), IAddressRepository
 {
-    public Task<Address> GetAddressBySupplier(Guid supplierId) =>
-        context.Addresses.AsNoTracking().FirstOrDefaultAsync(s => s.SupplierId == supplierId);
+    public async Task<Address> GetAddressBySupplier(Guid supplierId) =>
+        await Context.Addresses.AsNoTracking().FirstOrDefaultAsync(s => s.SupplierId == supplierId) ??
+        new();
 }
