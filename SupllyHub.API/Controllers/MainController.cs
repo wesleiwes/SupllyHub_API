@@ -5,7 +5,7 @@ namespace SupllyHub.API.Controllers;
 [ApiController]
 public abstract class MainController : ControllerBase
 {
-    protected ActionResult CustomResponse(object result = null)
+    protected ActionResult CustomResponse(object? result = null)
     {
         if (OperationIsValid())
         {
