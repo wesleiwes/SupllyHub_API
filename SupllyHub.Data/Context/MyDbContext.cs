@@ -10,9 +10,9 @@ public class MyDbContext : DbContext
         ChangeTracker.AutoDetectChangesEnabled = false;
     }
 
-    DbSet<Supplier> Suppliers { get; set; }
-    DbSet<Product> Products { get; set; }
-    DbSet<Address> Addresses { get; set; }
+    public DbSet<Supplier> Suppliers { get; set; }
+    public DbSet<Product> Products { get; set; }
+    public DbSet<Address> Addresses { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

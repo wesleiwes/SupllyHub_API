@@ -18,7 +18,7 @@ public abstract class Repository<TEntity>(MyDbContext context) : IRepository<TEn
 
     public virtual async Task Delete(Guid id)
     {
-        DbSet.Remove(new TEntity { Id = id});
+        DbSet.Remove(new TEntity { Id = id });
         await SaveChanges();
     }
 
@@ -36,7 +36,7 @@ public abstract class Repository<TEntity>(MyDbContext context) : IRepository<TEn
         await SaveChanges();
     }
 
-    public async Task<int> SaveChanges() => 
+    public async Task<int> SaveChanges() =>
         await Context.SaveChangesAsync();
 
     public void Dispose() => Context?.Dispose();

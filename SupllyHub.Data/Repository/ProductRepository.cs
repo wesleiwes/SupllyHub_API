@@ -16,5 +16,5 @@ public class ProductRepository(MyDbContext context) : Repository<Product>(contex
 
     public async Task<Product> GetProductSupplier(Guid id) =>
         await Context.Products.AsNoTracking().Include(f => f.Supplier).FirstOrDefaultAsync(p => p.Id == id) ??
-        new(); 
+        new();
 }

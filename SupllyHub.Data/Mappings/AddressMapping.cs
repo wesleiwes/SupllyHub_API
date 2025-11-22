@@ -7,7 +7,7 @@ public class AddressMapping : IEntityTypeConfiguration<Address>
 {
     public void Configure(EntityTypeBuilder<Address> builder)
     {
-        builder.HasKey(p=>p.Id);
+        builder.HasKey(p => p.Id);
 
         builder.Property(a => a.Street)
             .IsRequired()
